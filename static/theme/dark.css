@@ -1,0 +1,330 @@
+body,
+#footer {
+  color: #aaa;
+  background: #14143f;
+}
+#app {
+  background: #14143f;
+  /* 主背景 */
+  /* 模块背景 */
+  /* 首页登录框 */
+  /* 左上币种列表 */
+  /* 币币交易 */
+  /* c2c */
+}
+#app .bg-part {
+  background: #18184c;
+}
+#app .bod_rc {
+  border-right: 1px solid #638bd4;
+}
+#app .bod_bc {
+  border-bottom: 1px solid #202538;
+}
+#app .bgf8 {
+  background: #18184c;
+}
+#app .eee {
+  background: #14143f;
+}
+#app .input_bg {
+  border-color: #52688c;
+  color: rgba(255, 255, 255, 0.8);
+  background: #1b212f;
+}
+#app #c2c-box .show-detail {
+  background: #3a4067;
+}
+#app .add-mycoin,
+#app > .indexBlackes > .box {
+  background: #14143f;
+}
+#app .add-mycoin .account,
+#app > .indexBlackes > .box .account {
+  margin-bottom: 0;
+}
+#app > .indexBlackes {
+  background: #14143f;
+}
+#app > .indexBlackes > .login,
+#app > .indexBlackes .forget-box,
+#app > .indexBlackes #register-box {
+  background: #18184c;
+}
+#app #user-center > .content > ul,
+#app #user-center > .content > div,
+#app > .login,
+#app .indexBlackes .indexBlackes,
+#app > .forget-box {
+  background: #18184c;
+}
+#app .box .content_li,
+#app .box .list li {
+  border-bottom: 1px solid #202538;
+}
+#app .box .hide_div {
+  border: 1px solid #202538;
+}
+#app .box input {
+  color: #fff;
+}
+#app .box .bgf8 {
+  background: #18184c;
+}
+#app .homeLogin,
+#app .homeLogin:hover,
+#app .userInfo,
+#app .userInfo:hover {
+  background: rgba(37, 46, 62, 0.9);
+}
+#app .homeLogin {
+  background: rgba(37, 46, 62, 0.9);
+}
+#app .homeLogin:hover {
+  background: rgba(37, 46, 62, 0.9);
+}
+#app .homeLogin .userInfo {
+  background: rgba(37, 46, 62, 0.9);
+}
+#app .homeLogin .userInfo:hover {
+  background: rgba(37, 46, 62, 0.9);
+}
+#app .coins-list .list-con li {
+  border-top: 1px solid #19222b !important;
+}
+#app .coins-list .list-con li:last-child {
+  border-bottom: 1px solid #19222b !important;
+}
+#app #footer {
+  background: #14143f;
+}
+#app .home {
+  background: #262a42;
+}
+#app .home .main .main-l {
+  background: #262a42;
+  /* 币币交易公告 */
+}
+#app .home .main .main-l > div {
+  background: #18184c;
+  border: none;
+}
+#app .home .main .main-l .sidebar {
+  background: #181b2a;
+  border: none;
+}
+#app .home .main .main-l .sidebar .tabtitle .active {
+  color:#7a98f7;
+  border-bottom: 1px solid #7a98f7 ;
+}
+#app .home .main .main-l .sidebar .tabtitle span,
+#app .home .main .main-l .sidebar .tabtitle .active {
+  border-bottom: 1px solid #7a98f7;
+}
+#app .home .main .main-l .sidebar ul.coin-wrap li p:nth-child(even) {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
+#app .home .main .main-l .sidebar ul.coin-wrap li p:hover {
+  background: #1b232b !important;
+}
+#app .home .main .main-l .notice {
+  background: #181b2a;
+  border: none;
+}
+#app .home .main .main-l .notice .account-content {
+  background: #181b2a;
+}
+#app .home .main .main-l .notice .account-content li {
+  border-bottom: 1px dashed grey;
+}
+#app .home .main .main-r {
+  background: #181b2a;
+  border-left: none;
+}
+#app .home .main .main-r .exchange .new_price,
+#app .home .main .main-r .exchange .line {
+  border-bottom: 1px solid #303b4b;
+}
+#app .home .main .main-r .exchange ul li:nth-child(odd) {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
+#app .home .main .main-r .exchange ul li:hover {
+  background: #1b232b !important;
+}
+#app .home .main .main-r .entrust .list-title {
+  border-bottom: 1px solid #303b4b;
+}
+#app .home .main .main-r .entrust .content {
+  /* border: 1px solid #303b4b; */
+}
+#app .home .main .main-r .entrust span {
+  color: #aaa;
+}
+#app .home .main .main-r .entrust .active {
+  color: #d45858;
+}
+#app .home .main .main-r .entrust .ceilColor {
+  color: #009688;
+}
+#app .home .main .main-r .currency {
+  border: 1px solid #303b4b;
+}
+#app .home .main .main-r .detail .list-title {
+  border-bottom: 1px solid #303b4b;
+}
+#app .home .main .main-r .detail ul {
+  color: #aaa;
+}
+#app .home .main .main-r .detail .list-item li:nth-child(even) {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
+#app .home .main .main-r .detail .list-item li:hover {
+  background: #1b232b !important;
+}
+#app .home .trade .available {
+  border-bottom: 1px solid #303b4b;
+}
+#app .home .trade input {
+  background-color: #262a42;
+  border-color: #52688c;
+  color: #fff;
+}
+#app #c2c-box {
+  border: none;
+  background: #14143f;
+}
+#app #c2c-box > div {
+  background: #181b2a;
+}
+#app #c2c-box .mask {
+  background: rgba(0, 0, 0, 0.7);
+}
+#app #c2c-box .c2c-l {
+  margin-right: 10px;
+  border: none;
+}
+#app #c2c-box .c2c-l ul {
+  background: #181b2a;
+}
+#app #c2c-box .c2c-l ul li:hover,
+#app #c2c-box .c2c-l ul .bg_active {
+  background: #262b3c;
+}
+#app #c2c-box .c2c-r .inp-title {
+  border-bottom: 1px solid #303b4b;
+}
+#app #c2c-box .c2c-r .inp-box {
+  border: 1px solid #4b535f;
+}
+#app #c2c-box .c2c-r .inp-box span {
+  background: none;
+}
+#app #c2c-box .c2c-r .inp-box input {
+  border-color: #52688c;
+  color: #fff;
+  background: #1b212f;
+}
+#app #c2c-box .c2c-r .bot .list-title {
+  border-top: 1px solid #303b4b;
+}
+#app #c2c-box .c2c-r .bot li {
+  border-top: 1px solid #292e42;
+}
+#app #c2c-box .c2c-r .bot .list-title:hover,
+#app #c2c-box .c2c-r .bot li:hover {
+  background: #212c38;
+}
+#app .wrap .inp_wrap {
+  border: 1px solid  #4b535f;
+}
+#app .wrap .inp_wrap p {
+  background: none;
+  border-right: 1px solid #4b535f;
+  color: #aaa;
+}
+#app .wrap .inp_wrap input {
+  border-color: #52688c;
+  color: rgba(255, 255, 255, 0.8);
+  background: #1b212f;
+}
+#app .currency-lst ul {
+  background: #181b2a;
+}
+#app .currency-lst ul .list_title {
+  background: #282e42;
+}
+#app .currency-lst ul li {
+  border-bottom: 1px solid #313548;
+}
+#app .currency-lst ul li:hover {
+  background: #282e42;
+}
+#app #user-setting {
+  background: #181b2a;
+}
+#app #user-setting .setting-l {
+  border-right: 1px solid #4b535f;
+}
+#app #user-setting .inp-item {
+  border: 1px solid #4b535f;
+}
+#app #user-setting .inp-item div {
+  background: none;
+  border-right: 1px solid #4b535f;
+}
+#app #user-setting .inp-item input {
+  border-color: #52688c;
+  color: rgba(255, 255, 255, 0.8);
+  background: #1b212f;
+}
+#app .notice .account-content li {
+  border-bottom: 1px dashed #61688a;
+}
+#app .brcolor {
+  border-right: 1px dashed #2f3440;
+}
+#app .noticeDetail {
+  /* background: #181b2a; */
+}
+#app #user-center > .content > .content-l {
+  border-right: 1px solid #1e272f;
+}
+#app #user-security ul li {
+  border-top: 1px solid #1e272f;
+}
+#app .input-main {
+  border-color: #52688c;
+  color: #fff;
+  background: #1b212f;
+}
+#app .hisorder .tabbox {
+  border-bottom: 1px solid #202538;
+}
+#app .hisorder .tabbox .ticket-active {
+  border: 1px solid #202538;
+  margin-bottom: -1px;
+  border-bottom-color: #14143f;
+}
+#app .detail .enterbox .chossefile {
+  background: #283340;
+}
+#app #legaltrade-box > .list-box > .list-title {
+  border-bottom: 1px solid #4d535a;
+}
+#app #legaltrade-box > .buy-sell > div > .now > .current {
+  border-bottom: 2px solid #fff;
+  color: #fff;
+}
+#app .log_wrap[data-v-1f036bf9] {
+  border: 1px solid #1d1d1f;
+  background: #181b2a;
+}
+#app .allow {
+  color: #eee;
+}
+.scroll::-webkit-scrollbar {
+  background-color: #14143f!important;
+}
+.scroll::-webkit-scrollbar-thumb {
+  background-color: #222e3c!important;
+}
