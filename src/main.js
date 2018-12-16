@@ -22,7 +22,7 @@ Vue.prototype.$echarts = echarts
 window.eventBus = new Vue()
 let bus = new Vue()
 Vue.prototype.bus = bus
-Vue.use(VueSocketio, 'http://trading.coinbkb.com:2130');
+Vue.use(VueSocketio, 'http://noname.cxuyuan.com:2130');
 Vue.prototype.$changeTheme = function (type) {
 	var head = document.querySelector('head');
 	var link = document.querySelector('link#darkTheme');

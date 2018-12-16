@@ -27,10 +27,10 @@
                    <!-- <p class="flex1 tc">{{item.valuation}}</p> -->
                    <!-- <p class="flex1 tc">{{item.lock_position}}</p> -->
                    <p class="flex1 tc operation">
-                       <span @click="excharge(index,item.currency)" v-if="item.recharge_and_withdraw_opened==1">充币</span>
-                       <span v-else class="allow">充币</span>
-                       <span @click="withdraw(index,item.currency)" v-if="item.recharge_and_withdraw_opened==1">提币</span>
-                       <span v-else class="allow">提币</span>
+                       <span @click="excharge(index,item.currency)" >充币</span>
+                       <!-- <span v-else class="allow">充币</span> -->
+                       <span @click="withdraw(index,item.currency)" >提币</span>
+                       <!-- <span v-else class="allow">提币</span> -->
                        <!-- <span @click="exchange">兑换</span> -->
                        <span @click="rec(index,item.currency)">记录</span>
                    </p>
