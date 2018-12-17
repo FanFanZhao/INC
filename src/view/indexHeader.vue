@@ -5,13 +5,13 @@
         <img src="../assets/images/logo.png" alt="">
       </router-link>
       <router-link to="/" exact>首页</router-link>
-      <!-- <router-link to="/c2c">c2c交易</router-link> -->
-      <router-link to="/legalTrade">法币交易</router-link>
+      <router-link to="/c2c">c2c交易</router-link>
+      <!-- <router-link to="/legalTrade">法币交易</router-link> -->
       <router-link to="/dealCenter">币币交易</router-link>
-      <router-link to="/myLegalShops" v-if="isShow">我的商铺</router-link>
+      <!-- <router-link to="/myLegalShops" v-if="isShow">我的商铺</router-link> -->
       <!-- <router-link to="/fiatradCenter">法币交易</router-link> -->
       <!-- <router-link to="/userSetting">安全设置</router-link> -->
-      <router-link to="/wakuang">交易挖矿</router-link>
+      <router-link to="/wakuang">锁仓挖矿</router-link>
       <router-link to="/components/noticeList">公告</router-link>
       <router-link to="/help">帮助</router-link>
       <!-- <div class="coin-box">
