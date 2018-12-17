@@ -1,6 +1,6 @@
 <template>
-    <div id="c2c-box" class="flex">
-        <div class="c2c-l">
+    <div id="c2c-box" class="flex bMain mt5">
+        <div class="c2c-l" style="margin-right:5px;">
             
             <ul>
                 <li class="flex" v-for="(item,index) in currency_list" :key="index" :class="index == active?'bg_active':''" :data-id="item.id" @click="currency_click(item.id,item.name,index,item.c2c_ratio)">

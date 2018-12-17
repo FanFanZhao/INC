@@ -45,6 +45,7 @@ import currencyEdit from '@/view/edit_currency'
 import workOrder from '@/components/workOrder'
 import orderDetail from '@/view/orderDetail'
 import wakuang from '@/view/wakuang'
+import packing from '@/view/packing'
 import help from '@/view/helps'
 //收款方式
 
@@ -125,6 +126,11 @@ export default new Router({
 					path: '/wakuang',
 					name: 'wakuang',
 					component: wakuang
+				},
+				{
+					path: '/packing',
+					name: 'packing',
+					component: packing
 				},
 				{
 					path: '/help',

@@ -9,26 +9,26 @@
         <notice></notice>
       </div>
 			</div>
-			<div class="main-r">
+			<div class="main-r" style="background:none;">
 				<div class="chart_wrap flex">
           <!-- <chart></chart> -->
           <div style="min-width:67%">
             <!--<kline></kline>-->
 			      <tv></tv>
           </div>
-          <div class="deadl-wrap part-r" style="width:33%;padding-left:10px">
+          <div class="deadl-wrap part-r bPart" style="width:33%;margin-left:5px;">
 						<exchange></exchange>
 					</div>
         </div>
 				<div class="parts  flex between" >
-					<div class="trade-wrap part-l">
+					<div class="trade-wrap part-l bPart">
 						<trade></trade>
 					</div>
-					<div class="deatil_box" style="width:33%">
+					<div class="deatil_box bPart" style="width:33%;margin-left:5px;">
           <complete></complete>
         </div>
 				</div>
-        <div class="entrust_box" >
+        <div class="entrust_box bPart" >
           <entrust></entrust>
         </div>
         <!-- <div class="entrust_box">
@@ -38,9 +38,9 @@
             <detail></detail>
         </div> -->
 
-				<div class="currency_box">
+				<!-- <div class="currency_box">
           <currency></currency>
-        </div>
+        </div> -->
 				<!-- <div class="depth-map flex btween" >
 					<deal></deal>
 				</div> -->
@@ -122,7 +122,7 @@ export default {
     .main-r {
       margin-left: 355px;
       border-left: 1px solid #ccc;
-      padding: 0 5px 5px 20px;
+      padding: 0 5px 5px 0px;
       .parts {
         margin-top: 5px;
         max-height: 530px;

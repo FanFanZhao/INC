@@ -11,7 +11,8 @@
       <!-- <router-link to="/myLegalShops" v-if="isShow">我的商铺</router-link> -->
       <!-- <router-link to="/fiatradCenter">法币交易</router-link> -->
       <!-- <router-link to="/userSetting">安全设置</router-link> -->
-      <router-link to="/wakuang">锁仓挖矿</router-link>
+      <router-link to="/packing">锁仓挖矿</router-link>
+      <router-link to="/wakuang">我的锁仓</router-link>
       <router-link to="/components/noticeList">公告</router-link>
       <router-link to="/help">帮助</router-link>
       <!-- <div class="coin-box">

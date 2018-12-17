@@ -43,7 +43,7 @@
           </div>
           
           <ul class="list-con" v-for="(item,index) in quotation" :key="index" v-if="nowCoin == item.name">
-            <li v-for="(li,inde) in item.quotation" :key="inde" :data-name='item.name+"/"+li.name'>
+            <li class="bPart" v-for="(li,inde) in item.quotation" :key="inde" :data-name='item.name+"/"+li.name'>
               <div class="two-coin">
                 <span style="width:30px;text-align:left;display:inline-block;">
                   <img :src="li.logo" alt="" class="itemlogo">
@@ -150,7 +150,7 @@
             </div>
             <router-link to="/components/register" tag="div" class="btn">立即加入</router-link>
             <div>
-              <img src="https://ztstatic.oss-cn-hangzhou.aliyuncs.com/zg72/img/home-zg-pic-$.d1d0840.jpg" alt="">
+              <img src="../assets/images/bg1.png" alt="">
             </div>
           </div>
           <div>
@@ -158,7 +158,7 @@
             <div>支持币币交易、货币交易的区块链数字资产交易平台，由全球多国多领域顶级人才构成的精英团队，在系统安全、微秒级高负载、金融领域拥有资深经验</div>
           </div>
         </div>
-        <div class="notice flex">
+        <!-- <div class="notice flex">
           <div>
             <div class="notpic1"></div>
             <div>Coinbkb多功能生活服务</div>
@@ -181,9 +181,9 @@
           </div>
           
           
-        </div>
+        </div> -->
         <div class="mb">
-          <img src="../assets/images/homemb.jpg" alt="">
+          <img src="../assets/images/homemb0.png" alt="">
            <div>
               <div> 随时随地 不错过任何机会</div>
               <p> 实时交易：买入、卖出、杠杆</p>
@@ -211,7 +211,7 @@
             <div class="item" v-for='(item,index) in noticeList' :key="index" @click="goDetail(item.id)">
               <div class="date">{{item.title}}</div>
               <div class="content">
-                <img src="../assets/images/notbg.jpg" alt="">
+                <!-- <img src="../assets/images/notbg.jpg" alt=""> -->
                 <div class="title">{{item.title}}</div>
                 <p v-html="item.content"></p>
               </div>
@@ -530,8 +530,8 @@ footer{
   }
   > div:nth-child(2) {
     padding-top: 60px;
-    background: url("https://ztstatic.oss-cn-hangzhou.aliyuncs.com/zg72/img/home-zg-bg-1.5159fa3.jpg")
-      right top/ 832px 432px no-repeat;
+    // background: url("https://ztstatic.oss-cn-hangzhou.aliyuncs.com/zg72/img/home-zg-bg-1.5159fa3.jpg")
+    //   right top/ 832px 432px no-repeat;
     height: 500px;
     > div:first-child {
       font-size: 40px;
@@ -592,7 +592,7 @@ footer{
         height: 206px;
         padding: 30px;
         border-radius: 6px;
-        background-color: rgba(24, 24, 76, 1);
+        // background-color: rgba(24, 24, 76, 1);
         background-size: 100% !important;
         &::before {
           content: "";
@@ -602,7 +602,7 @@ footer{
           width: 0;
           border-right: 10px solid transparent;
           border-left: 10px solid transparent;
-          border-bottom: 10px solid #2b2b6d;
+          border-bottom: 10px solid #181b2a;
           opacity: 0;
           -webkit-transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
           transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -637,6 +637,7 @@ footer{
         transition: all 0.5s;
 
         .content {
+          background: #181b2a;
            &::before{
              opacity: 1;
            }
@@ -659,7 +660,7 @@ footer{
 
       .content {
         &::before{
-          opacity: 1;
+          // opacity: 0;
         }
         div,
         p {

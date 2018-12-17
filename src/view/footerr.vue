@@ -51,11 +51,11 @@ export default {
 </script>
 <style scoped>
 .footer_wrap {
-  background: #14143f;
+  background:#181b2a!important;
   color: #6b80ae;
   overflow: hidden;
   padding: 50px 80px;
- 
+  margin-top: 10px;
 }
 .footer_box{
   width: 100%;

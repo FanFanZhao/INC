@@ -25,8 +25,20 @@ html,body{
 .red{
     color: #de5959;
 }
+.border_cor{
+    border-color: #303b4b!important;
+}
 .bgPart{
     background: #181b2a;
+}
+body,#app,.indexBlackes{
+    background: #262a42!important;
+}
+.bMain{
+    background: #262a42!important;
+}
+.bPart,.footer_wrap{
+    background: #181b2a!important;
 }
 html,body{
     width: 100%;
@@ -133,6 +145,7 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {    -webkit-a
 .ft20{font-size: 20px;}
 .ft24{font-size: 24px;}
 .ml40{margin-left: 40px;}
+.mt5 {margin-top: 5px;}
 .mt10 {margin-top: 10px;}
 .mt15 {margin-top: 15px;}
 .mt20{margin-top: 20px;}
