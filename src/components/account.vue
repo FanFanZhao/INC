@@ -1,8 +1,8 @@
 <template>
-    <div class="box">
+    <div class="box bMain">
         <indexHeader></indexHeader>
-        <div class="account flex">
-            <left v-bind:lang="lang" :current="0"></left>
+        <div class="account flex bMain">
+            <left class="bPart" v-bind:lang="lang" :current="0"></left>
             <router-view></router-view>
         </div>
     </div>

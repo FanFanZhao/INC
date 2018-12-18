@@ -1,7 +1,7 @@
 <template>
     <div class="notice">
         <!-- <indexHeader></indexHeader> -->
-        <div class="account-wrap">
+        <div class="account-wrap bPart">
             <div class="account" style="width:auto">
                 <div>
                     <div class="back-nav  ft20 clear" style="padding:0 20px;"> 帮助中心
@@ -26,11 +26,11 @@
                         </ul> 
                     </div>
                     <div class="tc" style="padding:15px">
-                        <!-- <div class="fColor1 ft14 mt10" @click="getMore">{{more}}</div> -->
-                        <!-- <div>
+                        <div class="baseColor ft14 mt10 more" v-if="!loading" @click="getMore">{{more}}</div>
+                        <div class="loading" v-if="loading">
                             <img src="@/assets/images/loading.gif" alt=""  class="lodw20">
                             <p class="ft12 baseColor">加载中...</p>
-                        </div> -->
+                        </div>
                     </div>
                 </div>
              </div>
@@ -44,8 +44,10 @@ export default {
   components: { indexHeader },
   data() {
     return {
-      more: "点击加载更多...",
-      newList: []
+      loading:false,
+      more: "加载更多",
+      newList: [],
+      page:1
     };
   },
   created() {
@@ -70,19 +72,29 @@ export default {
   methods: {
     getNotice(){
       this.$http({
-        url:  '/api/news/list?c_id=7',
+        url:  '/api/news/list',
+        params:{page:this.page},
         method:'post',
       }).then(res => {
-        // console.log(res);
-        this.newList=res.data.message.list
-        
+        console.log(res);
+        if(res.data.type == 'ok'){
+          if(res.data.message.list.length != 0){
+              this.newList=this.newList.concat(res.data.message.list)
+          }else{
+              this.loading = false;
+              this.more = '没有更多了'
+          } 
+        }
+
       })
     },
     goBefore() {
       this.$router.back(-1);
     },
     getMore() {
-      console.log(123);
+      this.loading = true;
+      this.page++;
+      this.getNotice();
     },
     goDetail(id) {
       var id = id;
@@ -101,6 +113,8 @@ export default {
 <style lang="scss" scoped>
 .notice {
   .account-wrap {
+    width: 85%;
+    margin: 5px auto;
     // background: url(../assets/images/account_center_bg.jpg) no-repeat;
     // background-size: cover;
     .account {
@@ -149,6 +163,9 @@ export default {
         }
       }
     }
+  }
+  .more{
+    cursor: pointer;
   }
 }
 </style>

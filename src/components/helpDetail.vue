@@ -1,10 +1,10 @@
 <template>
-    <div class="noticeDetail">
+    <div class="noticeDetail bMain">
         <indexHeader></indexHeader>
-        <div class="account-wrap" style="background:##14143f">
+        <div class="account-wrap bPart" style="background:##14143f">
             <div class="account" style="background:##14143f">
                 <div>
-                    <div class="back-nav  ft20"> 
+                    <div class="back-nav  ft16"> 
                         <span class="fr  curPer" @click="goBefore">&lt;&lt;返回</span>
                     </div>
                     <div class="nav-after"></div>
@@ -96,7 +96,13 @@ export default {
 </script>
 <style lang="scss" scoped>
 .noticeDetail{
+    .back-nav{
+        width: 100%;
+        overflow: hidden;
+    }
     .account-wrap{
+        width: 85%;
+        margin: 5px auto;
         // background: url(../assets/images/account_center_bg.jpg) no-repeat;
         // background-size: cover;
         .account {

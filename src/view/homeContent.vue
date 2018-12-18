@@ -43,7 +43,7 @@
           </div>
           
           <ul class="list-con" v-for="(item,index) in quotation" :key="index" v-if="nowCoin == item.name">
-            <li class="bPart" v-for="(li,inde) in item.quotation" :key="inde" :data-name='item.name+"/"+li.name'>
+            <li class="bMain" v-for="(li,inde) in item.quotation" :key="inde" :data-name='item.name+"/"+li.name'>
               <div class="two-coin">
                 <span style="width:30px;text-align:left;display:inline-block;">
                   <img :src="li.logo" alt="" class="itemlogo">
@@ -57,10 +57,10 @@
                 {{li.yesterday_last_price}}
               </div> -->
               <div class="today" :data-name='item.name+"/"+li.name'>
-                {{li.now_price}}
+                {{li.now_price||0}}
               </div>
               <div class="yes-toa" :class="li.change<0?'down-clr':'up-clr'">
-                {{li.change}}%
+                {{li.change||0}}%
               </div>
             </li>
           </ul>
@@ -153,7 +153,7 @@
               <img src="../assets/images/bg1.png" alt="">
             </div>
           </div>
-          <div>
+          <div class="gray9">
             <div>全球数字资产交易平台</div>
             <div>支持币币交易、货币交易的区块链数字资产交易平台，由全球多国多领域顶级人才构成的精英团队，在系统安全、微秒级高负载、金融领域拥有资深经验</div>
           </div>
@@ -184,12 +184,12 @@
         </div> -->
         <div class="mb">
           <img src="../assets/images/homemb0.png" alt="">
-           <div>
+           <div  class="gray9">
               <div> 随时随地 不错过任何机会</div>
               <p> 实时交易：买入、卖出、杠杆</p>
               <p> 随身充提：充值、提现</p>
               <p>实时提醒：行情提醒、事件提醒</p>
-              <div class="flex down">
+              <!-- <div class="flex down">
                 <div class="  posrel flex alcenter  jscenter mr20" @mouseover="anclick" @mouseout="anclick2">
                   <img src="../assets/images/an.png" alt="" class="mr10 imglogo">
                     <span class="" >安卓下载</span>
@@ -200,7 +200,7 @@
                   <span class="">苹果下载</span>
                   <img src="../assets/images/ewm.png" alt="" class="erweima mt20 posabs" v-show="show2">
                 </div>
-            </div>
+            </div> -->
            </div>
           
         </div>
@@ -540,7 +540,7 @@ footer{
     }
     > div:nth-child(2) {
       margin-top: 20px;
-      color: rgba(139, 137, 200, 0.5);
+      color: rgba(220, 220, 220, 0.8);
       line-height: 30px;
       width: 45%;
     }
@@ -788,7 +788,7 @@ footer{
     }
     p {
       line-height: 30px;
-      color: rgba(139, 137, 200, 0.5);
+      color: rgba(220, 220, 220, 0.8);
     }
   }
   .down{
@@ -868,7 +868,7 @@ footer{
       flex: 1;
 
       text-align: center;
-      color: #8b89c8;
+      color: #ccc;
       font-size: 14px;
     }
   }

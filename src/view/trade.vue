@@ -326,6 +326,10 @@ export default {
 </script>
 
 <style scoped>
+input{
+  background: #181b2a!important;
+  border-color:#232e41!important;
+}
 .title_box {
   height: 48px;
   line-height: 48px;

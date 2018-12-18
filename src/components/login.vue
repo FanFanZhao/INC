@@ -1,5 +1,5 @@
 <template>
-<div class="login">
+<div class="login bMain">
     <indexHeader></indexHeader>
     <div class="contentBK">
         <div class="content-wrap">

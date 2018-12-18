@@ -1,5 +1,5 @@
 <template>
-    <div class="notice">
+    <div class="notice bPart">
         <!-- <indexHeader></indexHeader> -->
         <div class="account-wrap">
             <div class="account" style="width:auto">
@@ -9,7 +9,7 @@
                     </div>
                     
                 </div>
-                <div class="account-content">
+                <div class="account-content bPart">
                     <div class="tc hide" style="padding-top: 150px;">
                         <img src="../assets/images/nodata.png" alt=""> 
                         <p class="fColor2 ft18">暂无数据</p>
@@ -100,6 +100,8 @@ export default {
 </script>
 <style lang="scss" scoped>
 .notice {
+  width: 85%;
+  margin: 5px auto;
   .account-wrap {
     // background: url(../assets/images/account_center_bg.jpg) no-repeat;
     // background-size: cover;

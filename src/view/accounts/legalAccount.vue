@@ -1,7 +1,7 @@
 <template>
-    <div class="main   clr-part">
+    <div class="main   clr-part bPart">
         <!-- <p class="legal_name">{{legal_name}}</p> -->
-        <div class="legalAccount_msg flex between bg-part" style="padding:20px 30px">
+        <div class="legalAccount_msg flex between bg-part bPart" style="padding:20px 30px">
           <div>
               <p class="ft12 msg_title">可用（{{legal_name}}）</p>
               <p style="color:#EF5E41">{{legal_balance}}</p>
@@ -15,7 +15,7 @@
               <p style="color:#2EDB99">{{legal_price}}</p>
           </div>
         </div>
-        <div class="transfer bg-part" style="margin-top:20px;padding:20px 30px">
+        <div class="transfer bg-part bPart" style="padding:20px 30px">
             <div class="direction flex">
                 <div>{{transferPms.type == 1?'法币':'交易'}}</div>
                 <img src="../../assets/images/transfer.png" alt="" @click="transferPms.type == 1?transferPms.type =2:transferPms.type =1">
@@ -33,26 +33,26 @@
             </div>
             <button type="button" class="curPer" :disabled='transferPms.number == ""' @click="transfer">划转</button>
         </div>
-        <div class="rec_wrap">
-           <p class="rec_title flex between bg-part" style="padding:20px 30px">
+        <div class="rec_wrap rec_wrap">
+           <p class="rec_title flex between " style="padding:20px 30px">
                <span>财务记录</span>
                <!-- <span class="all">全部</span> -->
            </p>
-           <p class="list_title flex around bgf8" style="padding:15px 30px;">
+           <p class="list_title flex around" style="padding:15px 30px;">
                <span class="ft14 flex1">数量</span>
                <span class="ft14 flex1 tc">记录</span>
                <span class="ft14 flex1 tr">时间</span>
            </p>
-           <div class="log_wrap">
-           <ul class="bg-part" style="padding:20px 30px">
+           <div class="log_wrap bPart border_cor">
+           <ul class="" style="padding:20px 30px">
               <li class="flex around ft12" v-for="(item,index) in recData" :key="index">
                   <span class="flex1 ft12 ptb ">{{item.value}}</span>
                   <span class="flex1 ft12 ptb tc">{{item.info}}</span>
                   <span class="flex1 ft12 ptb tr">{{item.created_time}}</span>
               </li>
            </ul>
-           <p class="ft12 light_blue no_rec bg-part" style="text-align:center;padding:20px 30px" v-show="recData.length == 0" >暂无记录</p>
-           <p class="ft12 light_blue no_rec bg-part" style="text-align:center;padding:20px 30px" v-show="recData.length != 0" @click="more">{{moreLog}}</p>
+           <p class="ft12 no_rec fColor2" style="text-align:center;padding:20px 30px" v-show="recData.length == 0" >暂无记录</p>
+           <p class="ft12 no_rec fColor2" style="text-align:center;padding:20px 30px" v-show="recData.length != 0" @click="more">{{moreLog}}</p>
            </div>
         </div>
         <!-- <router-link tag="p" class="huazhuan redBg" to='/transferLegal'>划转</router-link> -->

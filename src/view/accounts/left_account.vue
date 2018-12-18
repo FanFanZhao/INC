@@ -1,6 +1,6 @@
 <template>
 	<div class="leftNav ft14 bgf8">
-		<ul class="">
+		<ul class="bPart">
 			<li v-for="(item,index) in array" :class="index == curActive ? 'active' :''" @click="goto(index,item.page)">
 				<img :src="index == curActive ? item.src2 : item.src1"/>
 				<span>{{item.text}}</span>

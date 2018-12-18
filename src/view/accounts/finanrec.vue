@@ -1,8 +1,8 @@
 <template>
-    <div class="box">
+    <div class="box bMain">
         <indexHeader></indexHeader>
         <div class="account">
-            <div class="topcontent ft20 bgf8">
+            <div class="topcontent ft20 bgf8 bPart">
                 <span class="white"><span class="baseColor">交易账户></span> 财务记录</span>
             </div>
             <div class="content">

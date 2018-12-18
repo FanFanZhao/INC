@@ -66,11 +66,11 @@ export default {
                 data:{money:this.money,days:this.day},
                 headers:{Authorization:this.token}
             }).then(res => {
-                console.log(res)
+                console.log(res);
+               layer.msg(res.data.message);
                 if(res.data.type == 'ok'){
-                    
-                }
-                
+                    this.$router.push('/wakuang');
+                }      
             })
          }
      }

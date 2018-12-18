@@ -1,9 +1,9 @@
 <template>
     <div class="account-box wrap">
-        <div class="title bgf8">
+        <div class="title bgf8 bPart">
                 身份认证
         </div>
-        <div class="main-content mt20 bgf8">
+        <div class="main-content mt20 bgf8 bPart">
             <div v-show="review_status==0">
                 <div class="main-input">
                     <div class="flex alcenter center">
@@ -185,6 +185,7 @@ export default {
         .main-content{
             min-height: 1080px;
             border-radius: 2px;
+            margin-bottom: 10px;
             .main-input{
                 margin: 0 auto;
                 text-align: center;

@@ -1,5 +1,5 @@
 <template>
-    <div id="transfer-legal" v-if="coins.length" class="bgf8">
+    <div id="transfer-legal" v-if="coins.length" class="bgf8 bPart">
        <div class="title">划转</div>
        <ul class="coins">
            <li v-for="(coin,index) in coins" :key="index" :class="{active:index == coinIndex}" @click="coinIndex = index;number = ''">

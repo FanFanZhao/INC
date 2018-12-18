@@ -327,6 +327,7 @@ export default {
   margin-right: 40px;
 }
 .content {
+  border:none!important;
   padding: 0 40px 0 30px;
   height: 300px;
   /* border: 1px solid rgb(204, 204, 204); */

@@ -1,5 +1,5 @@
 <template>
-    <div id="footer">
+    <div id="footer" class="bPart">
         <div>
             <span>联系我们</span>
             <span>费率标准</span>
@@ -19,7 +19,8 @@ export default {
 
 <style lang='scss'>
 #footer{
-   
+    margin-top: 10px;
+   padding: 30px 0;
     background: #09162e;
     color:#aabdbc;
     font-size: 14px;

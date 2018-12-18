@@ -10,7 +10,7 @@
       <router-link to="/dealCenter">币币交易</router-link>
       <!-- <router-link to="/myLegalShops" v-if="isShow">我的商铺</router-link> -->
       <!-- <router-link to="/fiatradCenter">法币交易</router-link> -->
-      <!-- <router-link to="/userSetting">安全设置</router-link> -->
+      <router-link to="/userSetting">安全设置</router-link>
       <router-link to="/packing">锁仓挖矿</router-link>
       <router-link to="/wakuang">我的锁仓</router-link>
       <router-link to="/components/noticeList">公告</router-link>
@@ -35,14 +35,14 @@
       <div v-if="account_number.length" class="flex">
         <div class="assets">
           <div>资产</div>
-          <div class="links">
+          <div class="links bPart">
             <router-link to='/finance'>交易</router-link>
             <!-- <router-link to='/finance'>交易交易</router-link> -->
           </div>
         </div>
         <div class="links-box">
           <div class="account_number">{{account_number}} (邀请码 {{extension_code}})</div>
-          <div class="links">
+          <div class="links bPart">
             <!-- <router-link to="/userCenter">个人中心</router-link> -->
             <div v-for="(item,index) in accountList" @click="goto(null,item.page)">{{item.title}}</div>
             <!-- <router-link to="/workOrder">提交工单</router-link> -->

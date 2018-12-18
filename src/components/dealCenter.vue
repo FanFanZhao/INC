@@ -1,11 +1,11 @@
 <template>
 	<div class="home">
 		<div class="main">
-			<div class="main-l fl" >
+			<div class="main-l fl bMain" >
 				<div class="sidebar">
           <market></market>
         </div>
-				<div class="notice_box" style="margin-top:5px">
+				<div class="notice_box bPart" style="margin-top:5px">
         <notice></notice>
       </div>
 			</div>
@@ -106,6 +106,7 @@ export default {
 
 <style scoped lang="scss">
 .home {
+  background: none!important;
   .main {
       overflow: hidden;
     .main-l {

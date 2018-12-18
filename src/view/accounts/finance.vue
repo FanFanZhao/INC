@@ -1,6 +1,6 @@
 <template>
-    <div class="bgf8">
-        <div class="header bgf8">
+    <div class="bgf8 bPart">
+        <div class="header bgf8 bPart">
             <p class="fl">总资产折合：<span class="asset_num">{{total}}</span><span class="asset_name">USDT</span><span class="ft12 "> ≈ <span>{{totalcny}}</span>CNY</span>
             <!-- <label class="min_lab ft14"><input type="checkbox" />隐藏小额资产</label><i></i><label class="inp_lab"><input  type="text"/><i></i></label> -->
             </p>

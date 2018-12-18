@@ -1,5 +1,5 @@
 <template>
-<div class="account-main bgf8">
+<div class="account-main bPart">
   <div id="user-security">
     <div  class="clear mb50">
             <div  class="fl">
@@ -254,7 +254,7 @@ $fColor2: #637085;
     width: 320px;
     height: 8px;
     border-radius: 4px;
-    background-color: $navBack;
+    background-color: #ccc;
     margin: 22px 0 12px 0;
     overflow: hidden;
     .bar-top {

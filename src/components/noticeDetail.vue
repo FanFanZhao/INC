@@ -1,10 +1,10 @@
 <template>
     <div class="noticeDetail">
         <indexHeader></indexHeader>
-        <div class="account-wrap">
+        <div class="account-wrap bPart">
             <div class="account">
                 <div>
-                    <div class="back-nav  ft20"> 
+                    <div class="back-nav  ft16"> 
                         <span class="fr  curPer" @click="goBefore">&lt;&lt;返回</span>
                     </div>
                     <div class="nav-after"></div>
@@ -98,13 +98,15 @@ export default {
 </script>
 <style lang="scss" scoped>
 .noticeDetail{
+    
     .account-wrap{
+        width: 85%;
+        margin: 5px auto;
         // background: url(../assets/images/account_center_bg.jpg) no-repeat;
         // background-size: cover;
         .account {
-            width: 1500px;
+            width: 100%;
             margin: 0 auto;
-            padding-top: 30px;
             overflow: hidden;
             min-height: 880px;
             .nav-after{
@@ -117,7 +119,7 @@ export default {
                 min-height: 750px;
                 // background-color: #18184c;
                 .detailBig{
-                    padding: 48px 46px 20px;
+                    padding: 0px 46px 20px;
                     .mb30{
                         margin-bottom: 30px;
                     }

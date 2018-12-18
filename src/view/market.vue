@@ -1,5 +1,5 @@
 <template>
-    <div class="market" >
+    <div class="market bPart" >
 		<div class="m_title  clear">
             <span class=" fl">市场</span>
             <div class="m_search fr hide">

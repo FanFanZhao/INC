@@ -1,9 +1,9 @@
 <template>
-    <div class="bgf8">
+    <div class="bgf8 bPart legal_wrap">
         <div class="top">
             <p>法币账户  总资产折合：{{totle}}（USDT）<span class='ft12 all_account'><span class=""></span>≈ <span>{{totlecny}}</span> CNY</span></p>
         </div>
-        <ul class="list">
+        <ul class="list ft14">
             <li class="curPer" v-for="(item,index) in list" :key="index" @click="go_legalAccount(item.currency)">
                 <p class="legal_name">{{item.currency_name}}</p>
                 <div class="balance_detail">
@@ -17,7 +17,7 @@
                     </div>
                     <div class="convert flex1">
                        <p class="ft12 mincny">折合</p>
-                       <p class="lock_balance_num">{{item.cny_money}}（CNY）</p>
+                       <p class="lock_balance_num">{{(item.legal_balance*item.cny_price).toFixed(5)}}（CNY）</p>
                     </div>
                 </div>
             </li>
@@ -76,6 +76,9 @@ export default {
 }
 </script>
 <style scoped>
+.legal_wrap{
+    min-height: 820px;
+}
     .flex1{
         flex: 1;
     }

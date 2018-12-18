@@ -1,8 +1,8 @@
 <template>
-    <div class="box">
+    <div class="box bMain">
         <indexHeader></indexHeader>
         <div class="account">
-            <div class="topcontent ft20 redColor bgf8">
+            <div class="topcontent ft20 redColor bgf8 bPart">
                 <span ><span class="">资产></span> 提币地址管理</span>
             </div>
             <div class="content">

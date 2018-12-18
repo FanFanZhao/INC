@@ -1,8 +1,8 @@
 <template>
-    <div class="box">
+    <div class="box bMain">
         <!-- <indexHeader></indexHeader> -->
         <div class="account">
-            <div class="topcontent ft20 bgf8">
+            <div class="topcontent ft20 bgf8 bPart">
                 <span>资产</span>
             </div>
             <div class="leftcontent contentBK">

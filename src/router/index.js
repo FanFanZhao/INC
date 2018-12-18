@@ -54,6 +54,9 @@ import ResetPwd from '@/components/ResetPwd' //重置密码密码
 import bindmpwd from '@/components/bindmpwd' //资金密码
 import withdraw_address from '@/view/accounts/withdraw_address'
 import PayCannel from '@/components/PayCannel'  //取消订单
+import bindAlipay from '@/components/bindAlipay'
+import bindWechat from '@/components/bindWechat'
+import bindBank from '@/components/bindBank'
 Vue.use(Router)
 export default new Router({
 	routes: [
@@ -141,10 +144,27 @@ export default new Router({
 					path: '/userSetting',
 					name: 'userSetting',
 					component: userSetting,
-					children: [{
-						path: '',
-						component: payOpts
-					}]
+					// children: [{
+					// 	path: '',
+					// 	component: payOpts
+					// }]
+					children:[
+						{
+							path: '',
+							name: 'bindAlipay',
+							component: bindAlipay
+						},
+						{
+							path: '/bindWechat',
+							name: 'bindWechat',
+							component: bindWechat
+						},
+						{
+							path: '/bindBank',
+							name: 'bindBank',
+							component: bindBank
+						},
+					]
 				},
 				{
 					path: '/c2c',

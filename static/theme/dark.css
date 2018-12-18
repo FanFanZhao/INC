@@ -16,7 +16,7 @@ body,
   background: #18184c;
 }
 #app .bod_rc {
-  border-right: 1px solid #638bd4;
+  border-right: 1px solid #202538;
 }
 #app .bod_bc {
   border-bottom: 1px solid #202538;
@@ -90,19 +90,19 @@ body,
   background: rgba(37, 46, 62, 0.9);
 }
 #app .coins-list .list-con li {
-  border-top: 1px solid #19222b !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 #app .coins-list .list-con li:last-child {
-  border-bottom: 1px solid #19222b !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 #app #footer {
   background: #14143f;
 }
 #app .home {
-  background: #262a42;
+  background: #080d13;
 }
 #app .home .main .main-l {
-  background: #262a42;
+  background: #18184c;
   /* 币币交易公告 */
 }
 #app .home .main .main-l > div {
@@ -110,16 +110,16 @@ body,
   border: none;
 }
 #app .home .main .main-l .sidebar {
-  background: #181b2a;
+  background: #18184c;
   border: none;
 }
 #app .home .main .main-l .sidebar .tabtitle .active {
-  color:#7a98f7;
-  border-bottom: 1px solid #7a98f7 ;
+  border: 1px solid #a3acb5;
+  border-bottom: none !important;
 }
 #app .home .main .main-l .sidebar .tabtitle span,
 #app .home .main .main-l .sidebar .tabtitle .active {
-  border-bottom: 1px solid #7a98f7;
+  border-bottom: 1px solid #a3acb5;
 }
 #app .home .main .main-l .sidebar ul.coin-wrap li p:nth-child(even) {
   background: rgba(0, 0, 0, 0.1) !important;
@@ -128,17 +128,17 @@ body,
   background: #1b232b !important;
 }
 #app .home .main .main-l .notice {
-  background: #181b2a;
+  background: #18184c;
   border: none;
 }
 #app .home .main .main-l .notice .account-content {
-  background: #181b2a;
+  background: #18184c;
 }
 #app .home .main .main-l .notice .account-content li {
   border-bottom: 1px dashed grey;
 }
 #app .home .main .main-r {
-  background: #181b2a;
+  background: #18184c;
   border-left: none;
 }
 #app .home .main .main-r .exchange .new_price,
@@ -155,7 +155,7 @@ body,
   border-bottom: 1px solid #303b4b;
 }
 #app .home .main .main-r .entrust .content {
-  /* border: 1px solid #303b4b; */
+  border: 1px solid #303b4b;
 }
 #app .home .main .main-r .entrust span {
   color: #aaa;
@@ -185,26 +185,26 @@ body,
   border-bottom: 1px solid #303b4b;
 }
 #app .home .trade input {
-  background-color: #262a42;
+  background-color: #14143f;
   border-color: #52688c;
   color: #fff;
 }
 #app #c2c-box {
   border: none;
-  background: #14143f;
+  background: #080d13;
 }
 #app #c2c-box > div {
-  background: #181b2a;
+  background: #18184c;
 }
 #app #c2c-box .mask {
-  background: rgba(0, 0, 0, 0.7);
+  background: 18184c;
 }
 #app #c2c-box .c2c-l {
   margin-right: 10px;
   border: none;
 }
 #app #c2c-box .c2c-l ul {
-  background: #181b2a;
+  background: #18184c;
 }
 #app #c2c-box .c2c-l ul li:hover,
 #app #c2c-box .c2c-l ul .bg_active {
@@ -248,7 +248,7 @@ body,
   background: #1b212f;
 }
 #app .currency-lst ul {
-  background: #181b2a;
+  background: #18184c;
 }
 #app .currency-lst ul .list_title {
   background: #282e42;
@@ -260,7 +260,7 @@ body,
   background: #282e42;
 }
 #app #user-setting {
-  background: #181b2a;
+  background: #18184c;
 }
 #app #user-setting .setting-l {
   border-right: 1px solid #4b535f;
@@ -284,7 +284,7 @@ body,
   border-right: 1px dashed #2f3440;
 }
 #app .noticeDetail {
-  /* background: #181b2a; */
+  background: #18184c;
 }
 #app #user-center > .content > .content-l {
   border-right: 1px solid #1e272f;
@@ -317,14 +317,14 @@ body,
 }
 #app .log_wrap[data-v-1f036bf9] {
   border: 1px solid #1d1d1f;
-  background: #181b2a;
+  background: #18184c;
 }
 #app .allow {
-  color: #eee;
+  color: #333;
 }
 .scroll::-webkit-scrollbar {
-  background-color: #14143f!important;
+  background-color: #181b2a!important;
 }
 .scroll::-webkit-scrollbar-thumb {
-  background-color: #222e3c!important;
+  background-color: #181b2a!important;
 }

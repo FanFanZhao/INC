@@ -1,8 +1,8 @@
 <template>
     <div id="c2c-box" class="flex bMain mt5">
-        <div class="c2c-l" style="margin-right:5px;">
+        <div class="c2c-l bPart" style="margin-right:5px;">
             
-            <ul>
+            <ul class="">
                 <li class="flex" v-for="(item,index) in currency_list" :key="index" :class="index == active?'bg_active':''" :data-id="item.id" @click="currency_click(item.id,item.name,index,item.c2c_ratio)">
                     <div class="flex">
                         <div>{{item.name}}/CNY</div>
@@ -12,7 +12,7 @@
                 </li>
             </ul>
         </div>
-        <div class="c2c-r">
+        <div class="c2c-r bPart">
             <div class="top">
                 <div class="top-title flex">
                     <div>
@@ -58,11 +58,11 @@
                                 <span>单价CNY</span>
                                 <input v-model="price" type="number">
                             </div>
-                            <div class="inp-box hide">
+                            <div class="inp-box">
                                 <span>姓名</span>
                                 <input type="text" v-model="user_name">
                             </div>
-                            <div class="inp-box hide">
+                            <div class="inp-box">
                                 <span>详细内容</span>
                                 <input type="text" v-model="content">
                             </div>
@@ -120,11 +120,11 @@
                                 <span>单价CNY</span>
                                 <input type="number" v-model="price01">
                             </div>
-                             <div class="inp-box hide">
+                             <div class="inp-box">
                                 <span>姓名</span>
                                 <input type="text" v-model="user_name01">
                             </div>
-                            <div class="inp-box hide">
+                            <div class="inp-box">
                                 <span>详细内容</span>
                                 <input type="text" v-model="content01" />
                             </div>
@@ -186,11 +186,11 @@
                 <div class="ul-box scroll" v-if="nowList == 'listIn'">
                     <!-- c2c卖出 -->
                     <ul class="ul-out" v-if="showList&&listOut.list.length">
-                      <li v-for="(item,index) in listOut.list" :key="index" :class="item.show==1?'flex':'flex deny_trade'">
+                      <li v-for="(item,index) in listOut.list" :key="index" class="flex">
                           <div class="blue">卖出</div>
                           <div>{{item.price}}</div>
-                          <div>{{item.number}} {{item.token}}</div>
-                          <div>{{(item.number*item.price-0).toFixed(2)}}</div>
+                          <div>{{item.total_number}} {{item.token}}</div>
+                          <div>{{(item.total_number*item.price-0).toFixed(2)}}</div>
                           <div>{{item.status_name}}</div>
                           <div class="last">
                             <div class="btn-last" @click="buySell(item.id,'buy')" v-if="item.show==1">买入</div>
@@ -203,11 +203,11 @@
                     <!-- <div class="more"  v-if="listOut.length&&listOut.hasMore" @click="getList(1)">加载更多</div> -->
                     <!-- c2c买入 -->
                     <ul class="ul-in" v-if="showList&&listIn.list.length">
-                        <li v-for="(item,index) in listIn.list" :key="index" :class="item.show==1?'flex':'flex deny_trade'">
+                        <li v-for="(item,index) in listIn.list" :key="index" class="flex">
                             <div class="red">买入</div>
                             <div>{{item.price}}</div>
-                            <div>{{item.number}} {{item.token}}</div>
-                            <div>{{(item.number*item.price-0).toFixed(2)}}</div>
+                            <div>{{item.total_number}} {{item.token}}</div>
+                            <div>{{(item.total_number*item.price-0).toFixed(2)}}</div>
                             <div>{{item.status_name}}</div>
                             <div class="last">
                               <div class="btn-last" @click="buySell(item.id,'sell')" v-if="item.show==1">卖出</div>
@@ -225,8 +225,8 @@
                     <li v-for="(item,index) in myAdd.list" :key="index" class="flex" >
                         <div :class='item.type_name=="挂买"?"red":"blue"'>{{item.type_name}}</div>
                         <div>{{item.price}}</div>
-                        <div>{{item.number}} {{item.token}}</div>
-                        <div>{{(item.number*item.price-0).toFixed(2)}}</div>
+                        <div>{{item.total_number}} {{item.token}}</div>
+                        <div>{{(item.total_number*item.price-0).toFixed(2)}}</div>
                         <div>{{item.status_name}}</div>
                         <div class="last">
                             <div class="btn-last" @click="cancelComplete('cancel_transaction',item.id)" v-if="item.type == 0&&item.status== 1" style="margin-right:10px;background: #ca4141;">取消交易</div>
@@ -245,7 +245,7 @@
                 <div class="ul-box scroll" v-if="nowList == 'myBuySell'">
                     <ul class="ul-out" v-if="showList&&myBuySell.list.length">
                         <li v-for="(item,index) in myBuySell.list" :key="index" class="flex" >
-                            <div :class='item.transaction_name=="买入"?"red":"blue"'>{{item.transaction_name}}</div>
+                            <div :class='item.type_name=="买入"?"red":"blue"'>{{item.transaction_name}}</div>
                             <div>{{item.price}}</div>
                             <div>{{item.number}} {{item.token}}</div>
                             <div>{{(item.number*item.price-0).toFixed(2)}}</div>
@@ -273,7 +273,7 @@
                 </div>
                 <div class="list">
                     <div class="create-date">
-                        <span>创建时间：</span><span>{{detail['c2c']['create_date']}}</span>
+                        <span>创建时间：</span><span>{{detail['create_date']}}</span>
                     </div>
                     
                     <div class="c2c-detail" v-if="detail.type=='c2c'">
@@ -291,15 +291,15 @@
                     <div class="myC2cDetail" v-if="detail.type=='myc2c'">
                         
                         <div>
-                            <span>交易类型：</span><span>{{detail.c2c.type_name}}</span>
+                            <span>交易类型：</span><span>{{detail.type_name}}</span>
                         </div>
                         <div>
-                            <span>币  种：</span><span>{{detail.c2c.token}}</span>
+                            <span>币  种：</span><span>{{detail.token}}</span>
                         </div>
                         <div>
-                            <span>价  格：</span><span>{{detail.c2c.price}}</span>
+                            <span>价  格：</span><span>{{detail.price}}</span>
                         </div>
-                        <div v-if="detail.c2c.status!=0&&detail.c2c.status!=3"> 
+                        <div v-if="detail.c2c.status!=0&&detail.status!=3"> 
                           <div>
                             <span>交易人：</span><span>{{detail.transaction_account_info.account_number}}</span>
                           </div>
@@ -443,7 +443,7 @@ export default {
     // 获取币种列表
     get_currency() {
       this.$http({
-        url: "/api/currency/c2c_list",
+        url: "/api/currency/list",
         method: "get",
         headers: { Authorization: this.token }
       }).then(res => {
@@ -477,7 +477,7 @@ export default {
       }).then(res => {
         layer.close(i);
         if (res.data.type == "ok") {
-          let list = res.data.message.list;
+          let list = res.data.message;
           ////console.log(list);
 
           if (list.length != 0) {
