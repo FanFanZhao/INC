@@ -1,5 +1,5 @@
 <template>
-    <div class="noticeDetail">
+    <div class="noticeDetail bMain">
         <indexHeader></indexHeader>
         <div class="account-wrap bPart">
             <div class="account">

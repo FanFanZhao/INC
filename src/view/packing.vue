@@ -51,6 +51,7 @@ export default {
              this.day = item;
          },
          pack(){
+             
              if(this.day == ''){
                  layer.msg('请选择天数');
                  return;
@@ -59,13 +60,14 @@ export default {
                  layer.msg('请输入数量');
                  return;
              }
-             
+             var i = layer.load();
              this.$http({
                 url:'/api/'+'lock_position/add',
                 method:'POST',
                 data:{money:this.money,days:this.day},
                 headers:{Authorization:this.token}
             }).then(res => {
+                layer.close(i);
                 console.log(res);
                layer.msg(res.data.message);
                 if(res.data.type == 'ok'){

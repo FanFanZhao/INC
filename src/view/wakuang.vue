@@ -40,6 +40,7 @@ export default {
     },
     methods:{
         getList(){
+            var i = layer.load();
             this.token = window.localStorage.getItem("token") || "";
             this.$http({
                 url: "/api/lock_position/mine",
@@ -47,6 +48,7 @@ export default {
                 params:{page:this.page},
                 headers:{Authorization:this.token}
             }).then(res => {
+                layer.close(i);
                 console.log(res)
                 if (res.data.type == "ok") {
                     if( res.data.message.data.length != 0){

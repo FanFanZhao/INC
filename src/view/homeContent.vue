@@ -13,12 +13,12 @@
                   </div> -->
               </div>
             
-              <!-- <div class="swiper-slide sliders">
+              <div class="swiper-slide sliders">
                   <a href="">
                   <img src="../../static/imgs/swp2.png" />
                   </a>
               </div>
-              <div class="swiper-slide sliders">
+              <!-- <div class="swiper-slide sliders">
                   <a href="">
                   <img src="../../static/imgs/swp3.png" />
                   </a>
@@ -186,7 +186,7 @@
           <img src="../assets/images/homemb0.png" alt="">
            <div  class="gray9">
               <div> 随时随地 不错过任何机会</div>
-              <p> 实时交易：买入、卖出、杠杆</p>
+              <!-- <p> 实时交易：买入、卖出、杠杆</p> -->
               <p> 随身充提：充值、提现</p>
               <p>实时提醒：行情提醒、事件提醒</p>
               <!-- <div class="flex down">
