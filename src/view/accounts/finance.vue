@@ -63,7 +63,7 @@
                        <input class="address_inp  mb30" type="text" v-model="address" />
                        <p class="fColor2 ft12 mb15 flex between alcenter"><span>数量</span><span>可用：<span class="use_num">{{balance}}</span><span>限额：<span>1500.000000000</span><span class="advance">提升额度</span></span></span></p>
                        <label class="num_lab flex between mb30">
-                            <input class="" type="text" :placeholder="min_number" v-model="number" />
+                            <input class="" type="text" :placeholder="'最小提币数量'+min_number" v-model="number" />
                             <span>{{coinname}}</span>
                         </label>
                        <div class="flex mb50">
@@ -150,7 +150,6 @@ export default {
             coinname:'',
             balance:'',
             ratenum:'',
-            reachnum:'',
             min_number:'',
             currency:'',
             asset_list:[],
@@ -168,6 +167,11 @@ export default {
     components:{
         indexHeader,
         left
+    },
+    computed:{
+        reachnum(){
+            return this.number*(1-this.rate/100);
+        }
     },
     methods:{
         goRecord(){
@@ -260,7 +264,7 @@ export default {
                         that.min_number=res.message.min_number;
                         that.minnumber=res.message.min_number;
                         that.ratenum=res.message.rate+'-'+res.message.rate;
-                        that.reachnum=0.0000;
+                        // that.reachnum= this.number*(1-res.message.rate/100);
                         that.rate=res.message.rate;
                         
                     }else{

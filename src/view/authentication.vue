@@ -15,7 +15,7 @@
                             <input type="text" placeholder="请输入身份证号" id="card" v-model="card_id">
                         </div>
                     </div>
-                    <div class="mt40 fColor1 ft14 tc">请上传身份证正反面，第一张为正面，第二张为反面。</div>
+                    <div class="mt40 fColor1 ft14 tc">请上传身份证正反面和手持身份证，第一张为正面，第二张为反面，第三张为手持身份证。</div>
                     <div class="idimg flex center mt40">
                         <div>
                             <img :src="src01" alt="">
@@ -24,6 +24,10 @@
                         <div>
                             <img :src="src02" alt="">
                             <input type="file" id="file" accept="image/*" name="file" @change="file2">
+                        </div>
+                        <div>
+                            <img :src="src03" alt="">
+                            <input type="file" id="file" accept="image/*" name="file" @change="file3">
                         </div>
                     </div>
                     <div class="updata tc">
@@ -52,8 +56,10 @@ export default {
            card_id:'',
            src1:'',
            src2:'',
+           src3:'',
            src01:'',
            src02:'',
+           src03:'',
            review_status:''
         }
     },
@@ -114,6 +120,31 @@ export default {
                 }
             });    
         },
+        file3(){
+            var that = this;
+            var reader = new FileReader();
+            reader.readAsDataURL(event.target.files[0]); 
+            reader.onload = function(e){
+                // console.log(e.target.result)
+                that.src3=e.target.result
+                that.src03=e.target.result
+            } 
+            var formData = new FormData();
+            formData.append("file", event.target.files[0]); 
+            $.ajax({
+                url: '/api/'+'upload',
+                type: 'post',
+                data: formData,
+                processData: false,
+                contentType: false,
+                beforeSend: function beforeSend(request) {
+                    request.setRequestHeader("Authorization", that.token);
+                },
+                success: function (msg) {
+                    that.src3=msg.message
+                }
+            });    
+        },
         updata(){
             var that = this;
             let name = this.$utils.trim(that.name);
@@ -134,7 +165,8 @@ export default {
                     name:name,
                     card_id:card_id,
                     front_pic:that.src1,
-                    reverse_pic:that.src2
+                    reverse_pic:that.src2,
+                    hand_pic:that.src3
                 },  
                 headers: {'Authorization':  that.token}    
             }).then(res=>{

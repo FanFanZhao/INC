@@ -15,7 +15,7 @@
             
               <div class="swiper-slide sliders">
                   <a href="">
-                  <img src="../../static/imgs/swp2.png" />
+                  <img src="../assets/images/bg01.png" />
                   </a>
               </div>
               <!-- <div class="swiper-slide sliders">

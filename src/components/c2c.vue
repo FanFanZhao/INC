@@ -475,7 +475,7 @@
                 </li> -->
               </ul>
               <p class="sendBox flex alcenter between">
-                <input class="chatInp" v-model="inpText" type="text" >
+                <input class="chatInp" v-model="inpText" type="text"  @keyup.enter="send">
                 <span class="send" @click="send">发送</span>
               </p>
           </div>
