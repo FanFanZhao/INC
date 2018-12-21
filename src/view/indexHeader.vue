@@ -15,6 +15,7 @@
       <router-link to="/wakuang">我的锁仓</router-link>
       <router-link to="/components/noticeList">公告</router-link>
       <router-link to="/help">帮助</router-link>
+      <a href="http://api2.pop800.com/chat/444434" target="_blank">联系客服</a>
       <!-- <div class="coin-box">
         <router-link to="/currencyApply">上币申请</router-link>
         <router-link to="/currencyList" >币种列表</router-link>
