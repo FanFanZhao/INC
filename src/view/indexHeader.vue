@@ -20,12 +20,12 @@
         <router-link to="/currencyApply">上币申请</router-link>
         <router-link to="/currencyList" >币种列表</router-link>
       </div> -->
-      <!-- <div>
+      <div>
         <div class="download">
-          <div class="curPer">帮助</div>
-          <img src="../assets/images/ewm.png" alt="">
+          <div class="curPer">APP下载</div>
+          <img src="../assets/images/INC_EWM.png" alt="">
         </div>
-      </div> -->
+      </div>
     </div>
     <div class="header-r flex">
       <div v-if="!account_number.length" class="flex">
